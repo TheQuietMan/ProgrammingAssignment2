@@ -48,3 +48,26 @@ cacheSolve <- function(X, ...) {
   X$setINV(INV) # and set the cache for next time
   INV # lastly return the inverted matrix
 }
+
+#Test case : 
+# here the matrix P14.10 is as given in FORTRAN 77 by Donald Monro (Puub Edward Arnold, London 1982)
+# the solution given in cacheSolve matches that given by Monro
+# and a matrix multiplication using the %*% operator returns the identity matrix (with rounding errors)
+#> source('~/Documents/RProg006/ProgrammingAssignment2/cachematrix.R')
+#> P14.10<-rbind(c(10,7,3,5),c(-6,8,-1,-4),c(3,1,4,11),c(5,-9,-2,4))
+#> P14.10List<-makeCacheMatrix(P14.10)
+#> P14.10Inv<-cacheSolve(P14.10List)
+#> P14.10Inv
+#[,1]        [,2]         [,3]        [,4]
+#[1,]  0.08310334 -0.03894511 -0.060410917  0.02330573
+#[2,]  0.05121128  0.11622202  0.007053051  0.03281202
+#[3,] -0.04477154 -0.35909230  0.017785955 -0.35203925
+#[4,] -0.01103956  0.13063477  0.100275989  0.11867525
+#> P14.10Inv%*%P14.10
+#[,1]          [,2]          [,3]          [,4]
+#[1,]  1.000000e+00 -3.816392e-17 -7.632783e-17  0.000000e+00
+#[2,]  2.151057e-16  1.000000e+00  4.163336e-17  8.326673e-17
+#[3,] -5.551115e-16  5.551115e-16  1.000000e+00 -2.220446e-16
+#[4,]  1.387779e-16 -1.387779e-16  5.551115e-17  1.000000e+00
+
+
