@@ -104,10 +104,9 @@ In order to complete this assignment, you must do the following:
 
 This assignment will be graded via peer assessment.
 
-### Final remarks
+### Test case : 
 
-Test case : 
- here the matrix P14.10 is as given in FORTRAN 77 by Donald Monro (Puub Edward Arnold, London 1982)
+ here the matrix P14.10 is as given in FORTRAN 77 by Donald Monro (Published by  Edward Arnold, London 1982)
  the solution given in cacheSolve matches that given by Monro
  and a matrix multiplication using the %*% operator returns the identity matrix (with rounding errors)
 
