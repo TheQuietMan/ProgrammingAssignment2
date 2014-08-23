@@ -110,6 +110,8 @@ Test case :
  here the matrix P14.10 is as given in FORTRAN 77 by Donald Monro (Puub Edward Arnold, London 1982)
  the solution given in cacheSolve matches that given by Monro
  and a matrix multiplication using the %*% operator returns the identity matrix (with rounding errors)
+
+```{r}
 > source('~/Documents/RProg006/ProgrammingAssignment2/cachematrix.R')
 > P14.10<-rbind(c(10,7,3,5),c(-6,8,-1,-4),c(3,1,4,11),c(5,-9,-2,4))
 > P14.10List<-makeCacheMatrix(P14.10)
@@ -126,4 +128,5 @@ Test case :
 [2,]  2.151057e-16  1.000000e+00  4.163336e-17  8.326673e-17
 [3,] -5.551115e-16  5.551115e-16  1.000000e+00 -2.220446e-16
 [4,]  1.387779e-16 -1.387779e-16  5.551115e-17  1.000000e+00
+```
 
